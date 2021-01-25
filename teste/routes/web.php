@@ -19,3 +19,7 @@ Route::post('/novo', [App\Http\Controllers\UsersController::class, 'novo']);
 Route::get('/editar/{id}', [App\Http\Controllers\UsersController::class, 'editar']);
 Route::post('/editar/{id}', [App\Http\Controllers\UsersController::class, 'update'])->name('atualizarDados');
 Route::get('/delete/{id}', [App\Http\Controllers\UsersController::class, 'delete']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
